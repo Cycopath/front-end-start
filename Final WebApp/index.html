@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <title>My Note</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="output">
+  <div class="header">
+    <h1>My Note</h1>
+    <div class="menu" id="menu">
+      <button class="btn-newnote">New</button>
+      <button class="btn-savenote">Save</button>
+      <button class="btn-about">About</button>
+      <button class="btn-full">Full Screen</button>
+    </div>
+  </div>
+
+  <div id="lay_mask"></div>
+  <div id="layer" class="">
+    <button class="btn-aboutClose" onclick="toggleLayer($('#layer'));">X</button>
+    <div id="text">
+      <h1>
+        Note Webapp
+      </h1>
+      <br><br><br>
+      <ul>
+        <b>상단 메뉴(.menu) 버튼 구성</b>
+        <ul>
+          <li>새노트: textarea(#memo)New Note</li>
+          <li>노트저장: Save Note</li>
+          <li>about:Application information </li>
+          <li>전체화면: Full Screen</li>
+        </ul>
+      </ul>
+      <ul>
+        <b>최초 진입시 localStorage에 저장된 내용이 있으면 textarea에 표시</b><br>
+        <b>package.json 작성</b><br>
+        <b>gulp로 개발환경 구축</b><br>
+      </ul>
+      <br><br>
+      <b>Version 0.00</b><br>
+      <b>제주대학교 MICE-IT 2016</b><br>
+      <b>컴퓨터교육과 이제인</b>     
+    </div>
+  </div>
+
+  <div class="container">
+    <textarea id="memo" placeholder="Input note content"></textarea>
+  </div>
+</div>
+
+<script src="lib/jquery-1.11.2.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
